@@ -1,7 +1,7 @@
 services:
     pctracker-client:
         image: curlimages/curl:8.3.0
-        command: sh -c "while true; do curl --request POST --url $SERVER_URL; sleep 60; done"
+        command: sh -c "while true; do curl -d '' --request POST --url $SERVER_URL; sleep 60; done"
         environment:
             SERVER_URL: '${SERVER_URL}'
         
